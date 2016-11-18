@@ -60,6 +60,11 @@ namespace ProjectTest2.Models
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
+
+       
+        public bool Position { get; set; }
+
+
     }
 
     public class RegisterViewModel
@@ -79,6 +84,10 @@ namespace ProjectTest2.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Position")]
+        public int Position { get; set; }
     }
 
     public class ResetPasswordViewModel
